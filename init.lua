@@ -21,3 +21,5 @@ require("mini-finder").setup({
     width = 0.5,           -- Width of the window (50% of editor width)
     position = "bottom",   -- Position of the window   
 })
+
+require("ui")
