@@ -1,6 +1,7 @@
 vim.lsp.config['pylsp'] = {
-  -- Command and arguments to start the server
-  cmd = { 'pylsp' },
+  -- Command to start server
+  -- cmd = { 'pylsp' },
+  cmd = { os.getenv("HOME") .. "/.local/uv-lsp-venv/bin/pylsp" },
   -- Filetypes to automatically attach to
   filetypes = { 'python' },
   -- Root directory markers for Python projects
