@@ -10,6 +10,9 @@ vim.cmd('syntax enable')
 vim.opt.syntax         = "on"
 vim.cmd('colorscheme koehler')
 vim.cmd('filetype plugin indent on')
+-- Prevents word from staying highlighted even after search is complete
+-- Press enter again after search to clear it
+vim.keymap.set("n", "<CR>", "<CR>:nohlsearch<CR>", { silent = true })
 
 ---- Plugins + Stuff ----
 require("plugins")
