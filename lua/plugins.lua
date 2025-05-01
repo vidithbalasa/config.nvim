@@ -22,3 +22,5 @@ require('nvim-treesitter.configs').setup {
 }
 
 require('lean').setup{ mappings = true }
+require("comment")
+require("markspots").setup()

@@ -1,7 +1,7 @@
 vim.lsp.config['pylsp'] = {
   -- Command to start server
-  -- cmd = { 'pylsp' },
-  cmd = { os.getenv("HOME") .. "/.local/uv-lsp-venv/bin/pylsp" },
+  cmd = { 'pylsp' },
+  -- cmd = { os.getenv("HOME") .. "/.local/uv-lsp-venv/bin/pylsp" },
   -- Filetypes to automatically attach to
   filetypes = { 'python' },
   -- Root directory markers for Python projects
@@ -9,14 +9,21 @@ vim.lsp.config['pylsp'] = {
   -- Specific settings to send to the server
   settings = {
     pylsp = {
+      python = {
+        pythonPath = vim.fn.getcwd() .. "/.venv/bin/python"
+      },
       plugins = {
         -- Linter options
         pycodestyle = {
-          enabled = true,
-          maxLineLength = 100
+          enabled = false
         },
         pylint = {
-          enabled = true
+          enabled = true,
+          args = {
+            "--max-line-length=999",
+            "--disable=missing-module-docstring",
+            "--disable=wrong-import-order"
+          }
         },
         -- Formatter options
         black = {
@@ -39,7 +46,7 @@ vim.lsp.config['pylsp'] = {
         },
         -- Import sorting
         pyls_isort = {
-          enabled = true
+          enabled = false
         }
       }
     }
