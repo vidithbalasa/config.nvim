@@ -1,5 +1,7 @@
 require("lsp.lua_ls")
 require("lsp.python_ls")
+require("lsp.terraform_ls")
+require("lsp.terragrunt_ls")
 
 -- Runs `:edit` when opening a new buffer
 -- Hacky fix bc for some reason neovim is making me do that

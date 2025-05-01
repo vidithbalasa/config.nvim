@@ -21,3 +21,5 @@ require('nvim-treesitter.configs').setup {
     auto_install = true,
 }
 
+require("comment")
+require("markspots").setup()
