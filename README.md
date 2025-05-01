@@ -4,7 +4,8 @@ Make sure you're using a new enough version of neovim
 ## Setup From Scratch
 1. Clone this repo into `~/.config` and rename it to `nvim`
 2. Clone `nvim-treesitter` into `~/.local/share/nvim/site/pack/plugins/start`
-3. Download any language servers
+3. Clone `lean.vim` into `~/.local/share/nvim/site/pack/plugins/start`
+4. Download any language servers
 
 ## Language Servers
 Feel free to use any language servers you like. I've included the ones I'm running below, if you want to use something else just change the configs in `~/.config/nvim/lua/plugins/*`.
